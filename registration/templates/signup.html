@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign Up</h5>
+            <form class="form-signin" action="" method="POST">
+                {% csrf_token %}
+                <div class="form-label-group mb-2">
+                    <label for="id_username">Username</label>
+                    {{form.username}}
+                </div>
+                <div class="form-label-group mb-2">
+                    <label for="id_first_name">Nama Depan</label>
+                    {{form.first_name}}
+                </div>
+                <div class="form-label-group mb-2">
+                    <label for="id_first_name">Nama Belakang</label>
+                    {{form.last_name}}
+                </div>
+                <div class="form-label-group mb-2">
+                    <label for="id_first_name">Email</label>
+                    {{form.email}}
+                </div>
+                <div class="form-label-group mb-2">
+                    <label for="id_first_name">Password</label>
+                    {{form.password1}}
+                </div>
+                <div class="form-label-group mb-2">
+                    <label for="id_first_name">Konfirmasi Password</label>
+                    {{form.password2}}
+                </div>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase mt-4" type="submit">Sign in</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+    

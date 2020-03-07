@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="list-group mt-4">
+            {% for instance in chat_qs %}
+            <button type="button" class="list-group-item list-group-item-action">
+                <h5>To : {{instance.destination}}</h5>
+                <p>{{instance.message}}</p>
+            </button>
+            {% endfor %}
+          </div>
+
+            
+            
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="list-group mt-4">
+            <a type="button" class="list-group-item list-group-item-action" href="{% url 'chat:chat' %}">
+                <h5>Buat Pesan</h5>
+            </a>
+            <a type="button" class="list-group-item list-group-item-action" href="{% url 'chat:inbox_chat' %}">
+                <h5>Pesan Masuk</h5>
+            </a>
+            <a type="button" class="list-group-item list-group-item-action" href="{% url 'chat:sent_chat' %}">
+                <h5>Pesan Terkirim</h5>
+            </a>
+          </div>
+    </div>
+{% endblock content %}
